@@ -2,7 +2,7 @@ import React from "react";
 
 const NotFound = () => {
     return (
-        <section className="container">
+        <section className="not-found">
             <h1 className="x-large text-primary">
                 <i className="fa-solid fa-triangle-exclamation"></i> Oops!
             </h1>

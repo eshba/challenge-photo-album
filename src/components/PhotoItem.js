@@ -4,14 +4,16 @@ import { connect } from "react-redux";
 import { loadPhoto } from "../actions/photo";
 
 const PhotoItem = ({ loadPhoto, photos }) => {
-    return (
-        <div className="album_inner">
-            {photos && photos.map((photo) => (
-                <div key={photo.id} className="album_item">
-                    <div className="img_placeholder" onClick={() => {loadPhoto(photo);}}>
+    return photos && (
+        <div className="album-inner">
+            {photos.map((photo) => (
+                <div key={photo.id} className="album-item">
+                    <div className="placeholder-thumb" onClick={() => {loadPhoto(photo);}}>
                         <img src={`${photo.thumbnailUrl}`} alt="" />
                     </div>
-                    <p className="medium text-primary">{photo.title}</p>
+                    <div className="thumb-desc">
+                        <p className="small text-primary underline">{photo.title}</p>
+                    </div>
                 </div>
             ))}
         </div>
