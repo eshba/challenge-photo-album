@@ -2,7 +2,6 @@ import { GET_ALBUMS } from "../actions/types";
 
 const initialState = {
     albums: [],
-    loading: true,
     error: {}
 };
 
@@ -14,7 +13,6 @@ function albumReducer(state = initialState, action) {
             return {
                 ...state,
                 albums: payload,
-                loading: false
             }
         default:
             return state;
